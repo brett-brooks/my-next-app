@@ -12,6 +12,7 @@ export async function POST(req: Request) {
             data: body,
         });
     }catch(err) {
+        console.error("Invalid JSON", err);
         return new Response("Invalid JSON", { status: 400 });
     }
 }
